@@ -10,7 +10,7 @@ funpack=$(cd $(dirname $0)/.. && pwd)
 
 # t
 t_ver="1.0.6"
-t_url="http://mirror.technicpack.net/Technic/servers/tekkitmain/Tekkit_Server_v$tl.zip"
+t_url="http://mirror.technicpack.net/Technic/servers/tekkitmain/Tekkit_Server_v$t_ver.zip"
 
 if test -d $cache/t-$t_ver
 then

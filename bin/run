@@ -31,7 +31,7 @@ env.write_templates(
 
 Open3.popen3("java",
             "-Xms#{env.ram}M", "-Xmx#{env.ram}M",
-            "-jar", "TekkitLite.jar",
+            "-jar", "Tekkit.jar",
             "nogui") do |stdin, stdout, stderr, wait_thr|
 
   processor = LogProcessor.new(wait_thr.pid, env.settings.schema)
