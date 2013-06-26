@@ -8,25 +8,25 @@ build=$(cd "$1/" && pwd)
 cache=$(cd "$2/" && pwd)
 funpack=$(cd $(dirname $0)/.. && pwd)
 
-# tl
-tl_ver="0.6.5"
-tl_url="http://mirror.technicpack.net/Technic/servers/tekkitlite/Tekkit_Lite_Server_$tl_ver.zip"
+# t
+t_ver="1.0.6"
+t_url="http://mirror.technicpack.net/Technic/servers/tekkitmain/Tekkit_Server_v$tl.zip"
 
-if test -d $cache/tl-$tl_ver
+if test -d $cache/t-$t_ver
 then
-  echo "-----> Using Tekkit Lite Version $tl_ver"
+  echo "-----> Using Tekkit Version $t_ver"
 else
   rm -rf $cache/*
-  mkdir -p $cache/tl-$tl_ver
-  cd $cache/tl-$tl_ver
-  echo -n "-----> Installing Tekkit Version $tl_ver"
-  curl --silent -L $tl_url -o tl.zip
-  unzip tl.zip > /dev/null
-  rm tl.zip
+  mkdir -p $cache/t-$t_ver
+  cd $cache/t-$t_ver
+  echo -n "-----> Installing Tekkit Version $t_ver"
+  curl --silent -L $t_url -o t.zip
+  unzip t.zip > /dev/null
+  rm t.zip
   echo " done"
 fi
 mkdir -p $build/tekkit
-cp -R $cache/tl-$tl_ver/* $build/tekkit
+cp -R $cache/t-$t_ver/* $build/tekkit
 
 cd $funpack
 mkdir -p $build/bin

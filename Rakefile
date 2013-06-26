@@ -1,8 +1,8 @@
 task :default => :start
 
-$build_dir = File.expand_path("~/funpacks/tekkit-lite/build")
-$cache_dir = File.expand_path("~/funpacks/tekkit-lite/cache")
-$working_dir = File.expand_path(ENV['WORKING'] || "~/funpacks/tekkit-lite/working")
+$build_dir = File.expand_path("~/funpacks/tekkit/build")
+$cache_dir = File.expand_path("~/funpacks/tekkit/cache")
+$working_dir = File.expand_path(ENV['WORKING'] || "~/funpacks/tekkit/working")
 
 task :start do
   system %Q{
@@ -15,7 +15,7 @@ task :start do
   Dir.chdir($working_dir) do
     File.write "data.json", <<-EOS
       {
-        "name": "Tekkit Lite!",
+        "name": "Tekkit",
         "access": { "whitelist": [] },
         "settings": {
           "max-players": 22,
